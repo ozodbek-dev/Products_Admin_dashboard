@@ -1,0 +1,100 @@
+@import "mixins";
+.dashboard {
+	height: 100vh;
+	overflow-y: auto;
+	.bar {
+		@include flex(row, unset);
+		padding: 0 1rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+		> input {
+			margin-right: auto;
+			@include inputStyle(100%, 1rem 0);
+		}
+		> img {
+			@include square(2rem);
+			border-radius: 50%;
+		}
+	}
+
+	.widget-container {
+		@include flex(row, space-between, stretch, 2rem);
+		padding: 2rem 2rem 2rem 0;
+
+		.widget {
+			min-width: 16rem;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 2rem;
+			@include flex(row, space-between, stretch, 0);
+			.widget-info {
+				> p {
+					opacity: 0.7;
+					font-size: 0.8rem;
+				}
+				> h4 {
+					font-size: 1.5rem;
+				}
+				> span {
+					@include flex(row, unset, center, 0.2rem);
+				}
+			}
+			.widget-circle {
+				position: relative;
+				@include square(5rem);
+				flex: none;
+				border-radius: 50%;
+				display: grid;
+				place-content: center;
+				background-color: aquamarine;
+				&::before {
+					content: "";
+					position: absolute;
+					@include square(4rem);
+					top: 0.5rem;
+					left: 0.5rem;
+					background-color: white;
+					border-radius: 100%;
+				}
+				span {
+					position: relative;
+				}
+			}
+		}
+	}
+	.graph-container {
+		@include flex(row, unset, unset, 2rem);
+		padding: 0 2rem 2rem 0;
+		> div {
+			background-color: white;
+			border-radius: 10px;
+		}
+
+		.revenue-chart {
+			width: 100%;
+			padding: 1rem 3rem;
+			> h2 {
+				@include heading;
+				margin: 1rem 0 2rem .25rem;
+				text-align: center;
+			}
+		}
+
+		.dashboard-categories {	
+			width: 100%;
+			max-width: 16rem;
+			@include flex(column, center, unset, 0rem);
+			padding-bottom: 2rem;
+
+			> h2{
+				@include heading;
+				margin: 1.5rem 0 2rem  0;
+				text-align: center;
+			}
+			>div{
+				overflow-y: auto;
+				padding-left: .5rem;
+			}
+		}
+	}
+}
