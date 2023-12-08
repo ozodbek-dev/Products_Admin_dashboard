@@ -1,0 +1,20 @@
+ {
+		"categories": [
+			{
+				"value": 30,
+				"heading": "Groceries"
+			},
+			{
+				"value": 20,
+				"heading": "Electronics"
+			},
+			{
+				"value": 50,
+				"heading": "Clothing"
+			},
+			{
+				"value": 70,
+				"heading": "Laptops"
+			}
+		]
+ }

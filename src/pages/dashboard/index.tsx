@@ -1,7 +1,8 @@
 import { withSidebar } from "@/HOC";
 import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
-import { HiTrendingUp } from "react-icons/hi";
+import { CategoryItem, WidgetItem } from "./components";
+import data from "@/assets/data.json";
 
 const userImg: string =
 	"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png";
@@ -27,50 +28,20 @@ const Dashboard = () => {
 			</section>
 
 			<section className='graph-container'>
-				<div className="revenue-chart">
+				<div className='revenue-chart'>
 					<h2>Revenue & Transactions</h2>
 				</div>
-				<div className="dashboard-categories">
+				<div className='dashboard-categories'>
 					<h2>Inventory</h2>
+					<div>
+						{data.categories.map(item => (
+							<CategoryItem key={item.heading} color={`hsl(${item.value},${item.value * 4}%,50%)`} value={item.value } heading={item.heading} />
+						))}
+					</div>
 				</div>
 			</section>
 		</>
 	);
 };
-
-interface WidgetItemProps {
-	heading: string;
-	value: number;
-	percent: number;
-	color: string;
-	amount?: boolean;
-}
-
-const WidgetItem = ({ heading, amount = false, value, percent, color }: WidgetItemProps): JSX.Element => (
-	<article className='widget'>
-		<div className='widget-info'>
-			<p>{heading}</p>
-			<h4>{amount ? `$${value}` : value}</h4>
-			{percent > 0 ? (
-				<span className='text-green'>
-					<HiTrendingUp /> + {percent}%{" "}
-				</span>
-			) : (
-				<span className='text-red'>
-					<HiTrendingUp /> + {percent}%{" "}
-				</span>
-			)}
-		</div>
-
-		<div
-			className='widget-circle'
-			style={{
-				background: `conic-gradient(${color} ${(Math.abs(percent) / 100) * 360}deg, rgb(255,255,255) 0)`,
-			}}
-		>
-			<span style={{ color }}>{percent}%</span>
-		</div>
-	</article>
-);
 
 export default withSidebar(Dashboard);
