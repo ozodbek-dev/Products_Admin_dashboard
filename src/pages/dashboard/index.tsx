@@ -3,7 +3,9 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
 import { CategoryItem, WidgetItem } from "./components";
 import data from "@/assets/data.json";
-import { BarChart } from "@/components/charts";
+import { BarChart, DoughnutChart } from "@/components/charts";
+import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from "@/components/dashboard-table";
 
 const userImg: string =
 	"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png";
@@ -53,6 +55,23 @@ const Dashboard = () => {
 						))}
 					</div>
 				</div>
+			</section>
+			<section className='transaction-container'>
+				<div className='gender-chart'>
+					<h2>Gender Ratio</h2>
+					<DoughnutChart
+						labels={["Male", "Female"]}
+						data={[12, 19]}
+						backgroundColor={["hls(340,82%,56%)", "rgba(53,162,235,0.8)"]}
+						cutout={80}
+					/>
+					<p>
+						<BiMaleFemale />
+					</p>
+				</div>
+				<DashboardTable
+					data={data.transactions}
+				/>
 			</section>
 		</>
 	);

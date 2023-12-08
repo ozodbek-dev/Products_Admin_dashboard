@@ -1,1 +1,1 @@
-export { default as withSidebar } from './withSidebar';
+export { default as withSidebar } from './with-sidebar';

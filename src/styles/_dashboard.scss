@@ -122,4 +122,96 @@
 			}
 		}
 	}
+	.transaction-container {
+		display: flex;
+		gap: 2rem;
+		padding: 0 2rem 2rem 0;
+		height: 30rem;
+		> div {
+			background-color: white;
+			box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.132);
+			border-radius: 10px;
+		}
+		.gender-chart {
+			width: 100%;
+			max-width: 20rem;
+			position: relative;
+			> h2 {
+				text-align: center;
+				margin: 1.5rem 0 2rem 0;
+				@include heading;
+			}
+			> p {
+				@include positionCenter;
+				font-size: 2rem;
+				color: rgba(0, 0, 0, 0.634);
+			}
+		}
+		.transaction-box{
+			width: 100%;
+			padding: 1rem;
+			overflow-x: auto;
+			>h2{
+				margin:1.5rem 0 0 0;
+			}
+		}
+	}
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	th,
+	td {
+		padding: 8px;
+		text-align: left;
+		vertical-align: middle;
+	}
+	th {
+		font-weight: bold;
+		color: #0000009e;
+		font-size: 1.1rem;
+		font-weight: 400;
+		padding: 2rem 1rem;
+	}
+	tbody {
+		tr {
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.093);
+		}
+		td {
+			padding: 1rem;
+			img {
+				width: 4rem;
+				height: 4rem;
+				object-fit: cover;
+				border-radius: 10px;
+			}
+			a {
+				text-decoration: none;
+				background-color: rgba(44, 104, 255, 0.455);
+				color: rgba(44, 104, 255, 0.455);
+				padding: 0.25rem 0.5rem;
+				border-radius: 10px;
+			}
+			button {
+				width: 2rem;
+				height: 2rem;
+				font-size: 1.1rem;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				cursor: pointer;
+				color: rgb(255, 44, 44);
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+			&:first-child {
+				border-left: none;
+			}
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
 }

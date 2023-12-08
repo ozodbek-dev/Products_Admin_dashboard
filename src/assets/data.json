@@ -1,20 +1,107 @@
- {
-		"categories": [
-			{
-				"value": 30,
-				"heading": "Groceries"
-			},
-			{
-				"value": 20,
-				"heading": "Electronics"
-			},
-			{
-				"value": 50,
-				"heading": "Clothing"
-			},
-			{
-				"value": 70,
-				"heading": "Laptops"
-			}
-		]
- }
+{
+	"categories": [
+		{
+			"value": 30,
+			"heading": "Groceries"
+		},
+		{
+			"value": 20,
+			"heading": "Electronics"
+		},
+		{
+			"value": 50,
+			"heading": "Clothing"
+		},
+		{
+			"value": 70,
+			"heading": "Laptops"
+		}
+	],
+
+	"transactions": [
+		{
+			"id": "txn1",
+			"quantity": 5,
+			"discount": 10,
+			"amount": 450.0,
+			"status": "completed"
+		},
+		{
+			"id": "txn2",
+			"quantity": 2,
+			"discount": 5,
+			"amount": 150.5,
+			"status": "pending"
+		},
+		{
+			"id": "txn3",
+			"quantity": 10,
+			"discount": 15,
+			"amount": 800.75,
+			"status": "processing"
+		},
+		{
+			"id": "txn4",
+			"quantity": 3,
+			"discount": 8,
+			"amount": 250.8,
+			"status": "completed"
+		},
+		{
+			"id": "txn5",
+			"quantity": 8,
+			"discount": 12,
+			"amount": 600.25,
+			"status": "pending"
+		},
+		{
+			"id": "txn6",
+			"quantity": 4,
+			"discount": 7,
+			"amount": 300.5,
+			"status": "completed"
+		},
+		{
+			"id": "txn7",
+			"quantity": 6,
+			"discount": 20,
+			"amount": 700.0,
+			"status": "processing"
+		},
+		{
+			"id": "txn8",
+			"quantity": 1,
+			"discount": 3,
+			"amount": 50.25,
+			"status": "pending"
+		},
+		{
+			"id": "txn9",
+			"quantity": 7,
+			"discount": 18,
+			"amount": 550.75,
+			"status": "completed"
+		},
+		{
+			"id": "txn10",
+			"quantity": 12,
+			"discount": 25,
+			"amount": 950.0,
+			"status": "processing"
+		},
+		{
+			"id": "txn11",
+			"quantity": 3,
+			"discount": 15,
+			"amount": 200.0,
+			"status": "pending"
+		},
+		{
+			"id": "txn12",
+			"quantity": 9,
+			"discount": 22,
+			"amount": 800.5,
+			"status": "completed"
+		}
+	]
+}
